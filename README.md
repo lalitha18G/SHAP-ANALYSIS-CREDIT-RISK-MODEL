@@ -69,7 +69,7 @@ The SHAP summary plot visualizes feature importance across the dataset. Features
 ### Interpretation
 - High positive SHAP values indicate features that increase the likelihood of default.
 - Negative SHAP values suggest features that decrease risk.
-
+  <a href=""></a>
 ---
 
 ## 4. Individual Prediction Explanation for High-Risk Loans
