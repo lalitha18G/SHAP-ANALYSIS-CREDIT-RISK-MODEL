@@ -21,14 +21,14 @@ with open("model_training.py", "w") as f:
     f.write("# Model training and SHAP analysis\n")
     f.write("import lightgbm as lgb\nimport shap\nimport pandas as pd\n...\n")  # Add full code here
 
-# 4. Save model architecture and hyperparameters
+## 4. Save model architecture and hyperparameters
 with open("model_report.txt", "w") as f:
     f.write("Model: LightGBM Classifier\n")
     f.write("Hyperparameters:\n")
     for param, value in model.get_params().items():
         f.write(f"  {param}: {value}\n")
 
-# 5. Save global SHAP interpretation (robust to .values vs array)
+## 5. Save global SHAP interpretation (robust to .values vs array)
 try:
     top_features = np.argsort(np.abs(shap_values.values).mean(0))[-3:][::-1]
     shap_array = shap_values.values
@@ -41,7 +41,7 @@ with open("global_shap_summary.txt", "w") as f:
     for i in top_features:
         f.write(f"- {X.columns[i]}\n")
 
-# 6. Save individual SHAP explanations for high-risk cases
+## 6. Save individual SHAP explanations for high-risk cases
 high_risk_idx = np.where(y_prob > 0.8)[0][:5]
 with open("individual_explanations.txt", "w") as f:
     for i in high_risk_idx:
@@ -69,13 +69,13 @@ The SHAP summary plot visualizes feature importance across the dataset. Features
 ### Interpretation
 - High positive SHAP values indicate features that increase the likelihood of default.
 - Negative SHAP values suggest features that decrease risk.
-  <a href="https://github.com/lalitha18G/SHAP-ANALYSIS-CREDIT-RISK-MODEL/blob/main/global_shap_summary.txt"> global shap </a>
+- <a href="https://github.com/lalitha18G/SHAP-ANALYSIS-CREDIT-RISK-MODEL/blob/main/global_shap_summary.txt"> global shap </a>
 ---
 
 ## 4. Individual Prediction Explanation for High-Risk Loans
 The following code snippet generates detailed explanations for individual high-risk loan applications (predicted probability ≥ 0.8):
 
-
+- <a href=""></a>
 ---
 
 ## 5. Summary & Conclusions
