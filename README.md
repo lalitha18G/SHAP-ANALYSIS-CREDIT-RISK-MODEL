@@ -10,13 +10,13 @@ This project involves developing a classification model (XGBoost) to predict loa
 ### Full Python Code
 
 ---
-# 1. Fit the model (after categorical fix)
+## 1. Fit the model (after categorical fix)
 model.fit(X, y, categorical_feature=["person_home_ownership", "loan_intent", "loan_grade", "cb_person_default_on_file"])
 
-# 2. Get predicted probabilities for the positive class (default = 1)
+## 2. Get predicted probabilities for the positive class (default = 1)
 y_prob = model.predict_proba(X)[:, 1]
 
-# 3. Save model training code
+## 3. Save model training code
 with open("model_training.py", "w") as f:
     f.write("# Model training and SHAP analysis\n")
     f.write("import lightgbm as lgb\nimport shap\nimport pandas as pd\n...\n")  # Add full code here
