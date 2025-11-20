@@ -1,0 +1,25 @@
+
+Loan ID 0 - Predicted Default Probability: 1.00
+  loan_grade: SHAP value = -0.9089
+  person_income: SHAP value = -0.7084
+  loan_int_rate: SHAP value = 0.4417
+
+Loan ID 2 - Predicted Default Probability: 0.99
+  person_income: SHAP value = -1.5892
+  loan_percent_income: SHAP value = 0.3777
+  person_emp_length: SHAP value = 0.3337
+
+Loan ID 3 - Predicted Default Probability: 0.99
+  person_income: SHAP value = -1.4443
+  cb_person_default_on_file: SHAP value = -0.7461
+  loan_percent_income: SHAP value = 0.6857
+
+Loan ID 4 - Predicted Default Probability: 1.00
+  loan_int_rate: SHAP value = -3.6642
+  loan_percent_income: SHAP value = -0.9552
+  person_income: SHAP value = 0.9250
+
+Loan ID 5 - Predicted Default Probability: 0.99
+  person_income: SHAP value = 1.3063
+  loan_grade: SHAP value = -0.8361
+  loan_int_rate: SHAP value = 0.5948
