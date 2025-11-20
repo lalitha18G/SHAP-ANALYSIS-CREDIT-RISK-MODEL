@@ -1,0 +1,4 @@
+Top 3 global SHAP features:
+- loan_grade
+- person_income
+- cb_person_default_on_file
